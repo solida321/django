@@ -1,0 +1,22 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'myapp/style.css' %}">
+</head>
+<body>
+    <h1>Store Product List</h1>
+    {% for category, items in store.items %}
+        <h2>Category: {{ category }}</h2>
+        <ul>
+            {% for item in items %}
+                <li>{{ item.name }} — <strong>${{ item.price }}</strong></li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+</body>
+</html>

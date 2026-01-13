@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login Form </title>
+    <link rel="stylesheet" href="{% static 'myapp/table.css'%}">
+    
+</head>
+<body>
+    
+    <table border="1">
+    
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>gender</th>
+    </tr>
+    {% for l in login %}
+    <tr>
+        <td>{{l.name}}</td>
+        <td>{{l.age}}</td>
+        <td>{{l.gender}}</td>
+    </tr>
+    {% endfor %}
+    
+</table>
+
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <link rel="stylesheet" href="{% static 'myapp/admin.css' %}">
+</head>
+<body>
+
+<div class="all">
+
+<header>
+    <nav class="navigation">
+        <h1>Admin</h1>
+        <a class="nav-btn" href="#">Home</a>
+        <a class="nav-btn" href="#">Shop</a>
+        <a class="nav-btn" href="#">Index</a>
+        <a class="nav-btn" href="#">Contact</a>
+        <a class="nav-btn" href="#">Cart</a>
+    </nav>
+</header>
+
+{% block content %}
+<div class="main">
+    <h1>Hi</h1>
+</div>
+{% endblock %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+
+{% load django_bootstrap5 %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Post </title>
+    {% bootstrap_css %}
+  
+    
+</head>
+<body>
+
+    <div class="container p-4">
+    <div class="table table-bordered ">
+        <tr>
+            <th><h1>Post title</h1></th>
+            <th><h1>Content</h1></th>
+        </tr>
+         {% for p in posts %}
+        <tr> 
+            <td><h5>{{p.title}}</h5></td>
+            <td><h5>{{p.content}}</h5></td>
+        </tr>
+        {% endfor %}
+    </div>
+    </div>
+
+    
+    
+</body>
+</html>
